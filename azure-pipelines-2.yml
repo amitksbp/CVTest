@@ -20,4 +20,4 @@ steps:
 
 - task: Bash@3
   inputs:
-    filePath: 'ChargeVision/check-server.sh'
+    filePath: 'ChargeVision/bashscript.sh'
