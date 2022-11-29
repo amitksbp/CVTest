@@ -1,4 +1,4 @@
-WEBPAGE="https://www.google.com/"
+WEBPAGE="https://https://cv3.chargevisiondev.com//"
 STDOUTFILE=".tempCurlStdOut"
 > $STDOUTFILE
 HTTPCODE=$(curl  --max-time 5 --silent --write-out %{response_code} --output "$STDOUTFILE" "$WEBPAGE")
