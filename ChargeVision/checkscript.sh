@@ -1,4 +1,5 @@
-WEBPAGE="http://www.chargevision3.com/"
+#WEBPAGE="http://www.chargevision3.com/"
+WEBPAGE="http://www.{chargevision3, chargevision5}.com/"
 STDOUTFILE=".tempCurlStdOut"
 > $STDOUTFILE
 HTTPCODE=$(curl --max-time 5 --silent --write-out %{response_code} --output "$STDOUTFILE" "$WEBPAGE")
