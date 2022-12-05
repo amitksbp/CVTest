@@ -1,4 +1,4 @@
-WEBPAGE="http://www.chargevision4.com/"
+WEBPAGE="http://admin.chargevision.com/"
 #WEBPAGE="http://www.{chargevision3, chargevision5}.com/"
 STDOUTFILE=".tempCurlStdOut"
 > $STDOUTFILE
