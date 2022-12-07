@@ -1,12 +1,15 @@
 #WEBPAGE="http://www.chargevision3.com/"
-WEBPAGE1="http://www.chargevision3.com/"
 #STDOUTFILE=".tempCurlStdOut"
+
+WEBPAGE1="http://www.chargevision3.com/"
 > $STDOUTFILE
 HTTPCODE1=$(curl --max-time 5 --silent --write-out %{response_code} --output "$STDOUTFILE" "$WEBPAGE1")
 
 #CONTENT=$(<$STDOUTFILE)
 #HTTPLOC=$(curl --location --output "$STDOUTFILE" "$WEBPAGE") 
-echo "HTTP LOC: "${#HTTPLOC}
+#echo "HTTP LOC: "${#HTTPLOC}
+
+
 echo "HTTP CODE1: "$HTTPCODE1
 if test $HTTPCODE1 -eq 200; then
     echo "HTTP STATUS CODE $HTTPCODE -> Chargevision3 website is up" # stdout
