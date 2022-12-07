@@ -14,7 +14,7 @@ echo "HTTP CODE1: "$HTTPCODE1
 if test $HTTPCODE1 -eq 200; then
     echo "HTTP STATUS CODE $HTTPCODE -> Chargevision3 website is up" # stdout
 else
-    >&2 echo "HTTP STATUS CODE $HTTPCODE -> Has something gone wrong?" #stderr
+    >&2 echo "HTTP STATUS CODE for CV3 $HTTPCODE -> Has something gone wrong?" #stderr
 fi
 #echo "CONTENT LENGTH: "${#CONTENT}" chars"
 
@@ -25,7 +25,7 @@ STDOUTFILE=".tempCurlStdOut"
 HTTPCODE2=$(curl --max-time 5 --silent --write-out %{response_code} --output "$STDOUTFILE" "$WEBPAGE2")
 echo "HTTP CODE2: "$HTTPCODE2
 if test $HTTPCODE2 -eq 200 || test $HTTPCODE2 -eq 301 ; then
-    echo "HTTP STATUS CODE $HTTPCODE -> Chargevision3 website is up" # stdout
+    echo "HTTP STATUS CODE for CV5 $HTTPCODE -> Chargevision5 website is up" # stdout
 else
     >&2 echo "HTTP STATUS CODE $HTTPCODE -> Has something gone wrong?" #stderr
 fi
