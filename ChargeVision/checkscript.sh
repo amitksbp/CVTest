@@ -7,5 +7,9 @@ CONTENT=$(<$STDOUTFILE)
 HTTPLOC=$(curl --location --output "$STDOUTFILE" "$WEBPAGE") 
 echo "HTTP LOC: "${#HTTPLOC}
 echo "HTTP CODE: "$HTTPCODE
-
+if test $HTTPCODE -eq 200; then
+    echo "HTTP STATUS CODE $HTTPCODE -> OK" # stdout
+else
+    >&2 echo "HTTP STATUS CODE $HTTPCODE -> Has something gone wrong?" #stderr
+fi
 echo "CONTENT LENGTH: "${#CONTENT}" chars"
