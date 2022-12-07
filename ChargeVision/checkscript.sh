@@ -1,8 +1,9 @@
 #WEBPAGE="http://www.chargevision3.com/"
 WEBPAGE1="http://www.chargevision3.com/"
-STDOUTFILE=".tempCurlStdOut"
+#STDOUTFILE=".tempCurlStdOut"
 > $STDOUTFILE
-HTTPCODE1=$(curl --max-time 5 --silent --write-out %{response_code} --output "$STDOUTFILE" "$WEBPAGE1")
+#HTTPCODE1=$(curl --max-time 5 --silent --write-out %{response_code} --output "$STDOUTFILE" "$WEBPAGE1")
+HTTPCODE1=$(curl --max-time 5 --silent --write-out %{response_code} --output  "$WEBPAGE1")
 #CONTENT=$(<$STDOUTFILE)
 #HTTPLOC=$(curl --location --output "$STDOUTFILE" "$WEBPAGE") 
 echo "HTTP LOC: "${#HTTPLOC}
