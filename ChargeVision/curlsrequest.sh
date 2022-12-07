@@ -4,3 +4,4 @@ if $HTTPCODE= "200" then
 echo "success"
 else
 echo "something's wrong"
+fi
