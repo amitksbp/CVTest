@@ -1,15 +1,20 @@
 #WEBPAGE="http://www.chargevision3.com/"
-WEBPAGE="http://www.chargevision3.com/"
+WEBPAGE1="http://www.chargevision3.com/"
 STDOUTFILE=".tempCurlStdOut"
 > $STDOUTFILE
-HTTPCODE=$(curl --max-time 5 --silent --write-out %{response_code} --output "$STDOUTFILE" "$WEBPAGE")
-CONTENT=$(<$STDOUTFILE)
-HTTPLOC=$(curl --location --output "$STDOUTFILE" "$WEBPAGE") 
+HTTPCODE1=$(curl --max-time 5 --silent --write-out %{response_code} --output "$STDOUTFILE" "$WEBPAGE1")
+#CONTENT=$(<$STDOUTFILE)
+#HTTPLOC=$(curl --location --output "$STDOUTFILE" "$WEBPAGE") 
 echo "HTTP LOC: "${#HTTPLOC}
-echo "HTTP CODE: "$HTTPCODE
-if test $HTTPCODE -eq 200; then
+echo "HTTP CODE1: "$HTTPCODE1
+if test $HTTPCODE1 -eq 200; then
     echo "HTTP STATUS CODE $HTTPCODE -> Chargevision3 website is up" # stdout
 else
     >&2 echo "HTTP STATUS CODE $HTTPCODE -> Has something gone wrong?" #stderr
 fi
-echo "CONTENT LENGTH: "${#CONTENT}" chars"
+#echo "CONTENT LENGTH: "${#CONTENT}" chars"
+
+
+WEBPAGE2="http://www.chargevision5.com/"
+HTTPCODE2=$(curl --max-time 5 --silent --write-out %{response_code} --output  "$WEBPAGE2")
+echo "HTTP CODE2: "$HTTPCODE2
