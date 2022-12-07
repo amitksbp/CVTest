@@ -20,7 +20,7 @@ STDOUTFILE=".tempCurlStdOut"
 > $STDOUTFILE
 HTTPCODE2=$(curl --max-time 5 --silent --write-out %{response_code} --output "$STDOUTFILE" "$WEBPAGE2")
 echo "HTTP CODE2: "$HTTPCODE2
-if test $HTTPCODE2 -eq 200 or 301 ; then
+if test $HTTPCODE2 -eq 200 || 301 ; then
     echo "HTTP STATUS CODE $HTTPCODE -> Chargevision3 website is up" # stdout
 else
     >&2 echo "HTTP STATUS CODE $HTTPCODE -> Has something gone wrong?" #stderr
