@@ -16,5 +16,7 @@ fi
 
 
 WEBPAGE2="http://www.chargevision5.com/"
-HTTPCODE2=$(curl --max-time 5 --silent --write-out %{response_code} --output  "$WEBPAGE2")
+STDOUTFILE=".tempCurlStdOut"
+> $STDOUTFILE
+HTTPCODE2=$(curl --max-time 5 --silent --write-out %{response_code} --output "$STDOUTFILE" "$WEBPAGE2")
 echo "HTTP CODE2: "$HTTPCODE2
