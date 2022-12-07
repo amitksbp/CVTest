@@ -20,4 +20,4 @@ steps:
 
 - task: Bash@3
   inputs:
-    filePath: 'ChargeVision/checkscript.sh'
+    filePath: 'ChargeVision/curlsrequest.sh'
