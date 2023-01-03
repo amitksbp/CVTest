@@ -1,1 +1,0 @@
-./checkurls.sh urls.txt
