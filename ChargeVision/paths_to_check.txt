@@ -1,0 +1,14 @@
+# Some pages that definitely shouldn't break!
+/
+/all-posts/
+/projects/
+
+# A page that doesn't exist, to illustrate what errors look like
+/does-not-exist/
+
+# Examples of articles
+/2022/02/two-twitter-cards/
+/2021/03/inner-outer-strokes-svg/
+
+# This is mounted in a slightly funky way using a Netlify redirect proxy
+/ideas-for-inclusive-events/
