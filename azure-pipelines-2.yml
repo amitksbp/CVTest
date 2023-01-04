@@ -21,4 +21,4 @@ steps:
 - task: Bash@3
   inputs:
     
-    filePath: 'ChargeVision/checkscript.sh' 'ChargeVision/urls.txt'
+    filePath: 'ChargeVision/checkscript.sh urls.txt' 
